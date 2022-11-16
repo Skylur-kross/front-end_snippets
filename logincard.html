@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div id="login-container"></div>
+</body>
+</html>
+<script>
+    const logincont = document.getElementById("login-container");
+   
+    const logindiv = document.createElement("div");
+    logindiv.className='logindiv';
+    logindiv.style.padding="10px";
+    logindiv.style.alignitems="center";
+    logindiv.style.backgroundColor="cyan";
+    logindiv.style.display="flex";
+    logindiv.style.flexDirection="column";
+
+    const loginhead = document.createElement("h1");
+    loginhead.className='logintitle';
+    loginhead.innerText="Login";
+  
+
+    const loginid = document.createElement("input");
+    loginid.className='loginuserid';
+    loginid.type="text";
+    loginid.style.width="200px";
+    loginid.style.height="30px";
+    loginid.style.margin="30px";
+    loginid.style.borderRadius="5px";
+
+    const loginpass = document.createElement("input");
+    loginpass.className='loginuserpass';
+    loginpass.type="password";
+    loginpass.style.width="200px";
+    loginpass.style.height="30px";
+    loginpass.style.margin="30px";
+    loginpass.style.borderRadius="5px";
+
+    const loginbtn = document.createElement("button");
+    loginbtn.className='loginbutton';
+    loginbtn.type="button";
+    loginbtn.style.width="100px";
+    loginbtn.style.height="30px";
+    loginbtn.style.margin="30px";
+
+
+
+
+
+    logincont.append(logindiv);
+    logindiv.append(loginhead);
+    logindiv.append(loginid);
+    logindiv.append(loginpass);
+    logindiv.append(loginbtn);
+    
+</script>
