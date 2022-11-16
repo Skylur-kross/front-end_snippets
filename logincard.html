@@ -7,12 +7,21 @@
     <title>Document</title>
     <style>
         body{
-            background-color: aquamarine;
+            background-color: rgb(255, 255, 255);
         }
+        .container{
+            margin-left: 500px;
+            background-color: rgb(50, 89, 135);
+            width: 500px;
+            padding: 5px 5px 40px 5px ;
+        }
+        
     </style>
 </head>
 <body>
+    <div class="container">
     <div id="login-container"></div>
+</div>
 </body>
 </html>
 <script>
@@ -20,48 +29,73 @@
    
     const logindiv = document.createElement("div");
     logindiv.className='logindiv';
-    logindiv.style.padding="10px";
-    logindiv.style.alignitems="center";
-    logindiv.style.backgroundColor="cyan";
-    logindiv.style.display="flex";
-    logindiv.style.flexDirection="column";
+    
+    logindiv.style.backgroundColor="white";
+    // logindiv.style.textAlign='center';
+    
 
     const loginhead = document.createElement("h1");
     loginhead.className='logintitle';
     loginhead.innerText="Login";
+    loginhead.style.textAlign='center';
   
+    const brelem1 = document.createElement("br");
+    const brelem2 = document.createElement("br");
+    const brelem3 = document.createElement("br");
+    const brelem4 = document.createElement("br");
+    
+    const inputhead1 = document.createElement('h3');
+    inputhead1.className='loginhead';
+    inputhead1.innerText="Email:";
+    inputhead1.style.marginLeft="40px";
+
+
+    const inputhead2 = document.createElement('h3');
+    inputhead2.className='passhead';
+    inputhead2.innerText="Password:";
+    inputhead2.style.marginLeft="40px";
+
 
     const loginid = document.createElement("input");
     loginid.className='loginuserid';
     loginid.type="text";
+    loginid.style.alignSelf='left';
+    loginid.style.marginBottom="30px";
+    loginid.style.marginLeft="40px";
     loginid.style.width="200px";
     loginid.style.height="30px";
-    loginid.style.margin="30px";
-    loginid.style.borderRadius="5px";
 
     const loginpass = document.createElement("input");
     loginpass.className='loginuserpass';
     loginpass.type="password";
+    loginpass.style.marginBottom="30px";
+    loginpass.style.marginLeft="40px";
+    loginpass.style.marginRight="40px";
     loginpass.style.width="200px";
     loginpass.style.height="30px";
-    loginpass.style.margin="30px";
-    loginpass.style.borderRadius="5px";
 
     const loginbtn = document.createElement("button");
     loginbtn.className='loginbutton';
     loginbtn.type="button";
+    loginbtn.innerHTML="submit"
     loginbtn.style.width="100px";
     loginbtn.style.height="30px";
     loginbtn.style.margin="30px";
+    loginbtn.style.alignItems="center";
 
-
-
-
+    loginbtn.addEventListener("click", myFunction);
+    function myFunction() {
+        window.alert("sometext");
+    }
 
     logincont.append(logindiv);
     logindiv.append(loginhead);
+    logindiv.append(inputhead1);
     logindiv.append(loginid);
+    logindiv.append(brelem1);
+    logindiv.append(inputhead2);
     logindiv.append(loginpass);
+    logindiv.append(brelem2);
     logindiv.append(loginbtn);
     
 </script>
