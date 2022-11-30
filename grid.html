@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #product-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 260px);
+        justify-content: space-between;
+        grid-gap: 20px;
+        margin: 20px;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid silver;
+        padding: 8px;
+      }
+      .card-image {
+        width: 100px;
+        height: 100px;
+        object-fit: fill;
+      }
+
+      /* .card-title {
+      } */
+    </style>
+  </head>
+  <body>
+    <div id="product-list"></div>
+  </body>
+</html>
+<script>
+  const productListElem = document.getElementById("product-list");
+
+  let productList = [];
+  const loadProducts = () => {
+    fetch("https://fakestoreapi.com/products")
+      .then((data) => data.json())
+      .then((data) => {
+        productList.length = 0;
+        productList = data;
+        renderProducts();
+      });
+  };
+
+  const renderProducts = () => {
+    const productListFragment = document.createDocumentFragment();
+    for (let i = 0; i < productList.length; i++) {
+      const { title, price, image } = productList[i];
+      const cardElem = prepareCard({ title, price, image });
+      productListFragment.appendChild(cardElem);
+    }
+    productListElem.appendChild(productListFragment);
+  };
+
+  const prepareCard = ({ title, price, image }) => {
+    const cardElem = document.createElement("div");
+    cardElem.className = "card";
+
+    const cardImage = document.createElement("img");
+    cardImage.src = image;
+    cardImage.className = "card-image";
+    cardElem.appendChild(cardImage);
+
+    const cardTitle = document.createElement("p");
+    cardTitle.innerText = title;
+    cardTitle.className = "card-title";
+    cardElem.appendChild(cardTitle);
+
+    const cardTitleSecondary = document.createElement("p");
+    cardTitleSecondary.innerText = price;
+    cardTitleSecondary.className = "card-secondary";
+    cardElem.appendChild(cardTitleSecondary);
+
+    return cardElem;
+  };
+
+  loadProducts();
+</script>

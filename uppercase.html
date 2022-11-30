@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- take in the new String
+        start a loop till the length of string
+
+        split the string when encounter white spaces
+        store the string instances before the white space till the previous white space
+
+        an array of substring of each word is created 
+        use uppercase method to capitalize each word -->
+        
+  <!-- @description - {Method to convert string into capitalise}
+  
+  Step 1 - Take user input , define a variable
+  Step 2 - Split the input into an arr using space
+  Step 3 - Iterate the splitted array
+  Step 4 - Get the first charater & convert into uppercase
+  Step 5 - Get the rest character & convert into lower case
+  Step 6 - Join 5 & 6 & append into result => result = result + fChar + rChar + " "
+ Step 7 - Return the result -->
+ 
+</body>
+<script>
+   function capitalString(str) {
+    let count = 0 ;
+    let newString = str.split(" ");
+    
+    for (var i = 0; i < newString.length; i++) {
+        count += 1;
+        newString[i] = newString[i][0].toUpperCase() + newString[i].substr(1);
+        
+    }
+     newString = newString.join(" ");
+    
+    console.log(newString);
+    // return count;
+}
+capitalString('start a loop till the length');
+</script>
+</html>

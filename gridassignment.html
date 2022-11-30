@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            gap: 4px;
+            grid-template-columns: repeat(auto-fill, 350px);
+            margin-left: 200px;
+            margin-right: 200px;
+
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+            
+            padding: 20px 20px 57px;
+            transition: .2s;
+        }
+        .card:hover{
+            transform:scale(1.1);
+            
+        }
+
+        .cardimg {
+            /* object-fit: fill; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0px;
+
+        }
+
+        .cardrestraunt {
+            margin-top: 20px;
+        }
+
+        .restname {
+            font-size: 17px;
+            font-weight: 500;
+            font-family: ProximaNova, arial, Helvetica Neue, sans-serif;
+            text-align: left;
+        }
+
+        .cardgenre {
+            color: #686b78;
+            font-size: 13px;
+            margin-top: 4px;
+            font-family: ProximaNova, arial, Helvetica Neue, sans-serif;
+            letter-spacing: 0;
+        }
+
+        .restimg {
+            width: 308px;
+            height: auto;
+            /* object-fit: fill; */
+        }
+
+        .carddetails {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-family: ProximaNova, arial, Helvetica Neue, sans-serif;
+            ;
+            font-size: 12px;
+        }
+
+        ._9uwBCwY0my {
+            background-color: rgb(3, 192, 3);
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- <div class="card">
+            <img class="cardimg" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/npko4czaetvihkj5dwll">
+        </div>
+        <div class="card">
+            <img class="cardimg" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/nbua7blgs0lf2vfkewkk">
+        </div>
+        <div class="card">
+            <img class="cardimg" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rzcekt7lvhxdxacg6dul">
+        </div>
+        <div class="card">
+            <img class="cardimg" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/r5sejrrfsn2pqdo0yokj">
+        </div>
+        <div class="card">
+            <img class="cardimg" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/cwdlsmtdutrfoy0e7j22">
+        </div>
+        <div class="card">
+            <img class="cardimg" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/ytwo1n5zaa7nplsnsryl">
+        </div>
+        <div class="card">
+            <img class="cardimg" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/iae2nb9wt9v0zgnrz3t5">
+        </div>
+        <div class="card">
+            <img class="cardimg" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/qzptnexmmniafew4ydqi">
+        </div>
+        <div class="card">
+            <img class="cardimg" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/inuz5b1g03lxlrnck5kl">
+        </div> -->
+
+        <div class="card">
+            <div class="cardimg">
+                <img class="restimg"
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/npko4czaetvihkj5dwll">
+            </div>
+            <div class="cardrestraunt">
+                <span class="restname">Sudamache Pohe</span>
+            </div>
+            <div class="cardgenre">
+                Snacks, Beverages
+            </div>
+            <div class="carddetails">
+                <div class="_9uwBCwY0my"><span>4.5</span></div>
+                <div>•</div>
+                <div>28 MINS</div>
+                <div>•</div>
+                <div class="nVWSi">₹200 FOR TWO</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="cardimg">
+                <img class="restimg"
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/nbua7blgs0lf2vfkewkk">
+            </div>
+            <div class="cardrestraunt">
+                <span class="restname">Sudamache Pohe</span>
+            </div>
+            <div class="cardgenre">
+                Snacks, Beverages
+            </div>
+            <div class="carddetails">
+                <div class="_9uwBCwY0my"><span>4.5</span></div>
+                <div>•</div>
+                <div>28 MINS</div>
+                <div>•</div>
+                <div class="nVWSi">₹200 FOR TWO</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="cardimg">
+                <img class="restimg"
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rzcekt7lvhxdxacg6dul">
+            </div>
+            <div class="cardrestraunt">
+                <span class="restname">Sudamache Pohe</span>
+            </div>
+            <div class="cardgenre">
+                Snacks, Beverages
+            </div>
+            <div class="carddetails">
+                <div class="_9uwBCwY0my"><span>4.5</span></div>
+                <div>•</div>
+                <div>28 MINS</div>
+                <div>•</div>
+                <div class="nVWSi">₹200 FOR TWO</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="cardimg">
+                <img class="restimg"
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/r5sejrrfsn2pqdo0yokj">
+            </div>
+            <div class="cardrestraunt">
+                <span class="restname">Sudamache Pohe</span>
+            </div>
+            <div class="cardgenre">
+                Snacks, Beverages
+            </div>
+            <div class="carddetails">
+                <div class="_9uwBCwY0my"><span>4.5</span></div>
+                <div>•</div>
+                <div>28 MINS</div>
+                <div>•</div>
+                <div class="nVWSi">₹200 FOR TWO</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="cardimg">
+                <img class="restimg"
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/cwdlsmtdutrfoy0e7j22">
+            </div>
+            <div class="cardrestraunt">
+                <span class="restname">Sudamache Pohe</span>
+            </div>
+            <div class="cardgenre">
+                Snacks, Beverages
+            </div>
+            <div class="carddetails">
+                <div class="_9uwBCwY0my"><span>4.5</span></div>
+                <div>•</div>
+                <div>28 MINS</div>
+                <div>•</div>
+                <div class="nVWSi">₹200 FOR TWO</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="cardimg">
+                <img class="restimg"
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/ytwo1n5zaa7nplsnsryl">
+            </div>
+            <div class="cardrestraunt">
+                <span class="restname">Sudamache Pohe</span>
+            </div>
+            <div class="cardgenre">
+                Snacks, Beverages
+            </div>
+            <div class="carddetails">
+                <div class="_9uwBCwY0my"><span>4.5</span></div>
+                <div>•</div>
+                <div>28 MINS</div>
+                <div>•</div>
+                <div class="nVWSi">₹200 FOR TWO</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="cardimg">
+                <img class="restimg"
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/iae2nb9wt9v0zgnrz3t5">
+            </div>
+            <div class="cardrestraunt">
+                <span class="restname">Sudamache Pohe</span>
+            </div>
+            <div class="cardgenre">
+                Snacks, Beverages
+            </div>
+            <div class="carddetails">
+                <div class="_9uwBCwY0my"><span>4.5</span></div>
+                <div>•</div>
+                <div>28 MINS</div>
+                <div>•</div>
+                <div class="nVWSi">₹200 FOR TWO</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="cardimg">
+                <img class="restimg"
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/qzptnexmmniafew4ydqi">
+            </div>
+            <div class="cardrestraunt">
+                <span class="restname">Sudamache Pohe</span>
+            </div>
+            <div class="cardgenre">
+                Snacks, Beverages
+            </div>
+            <div class="carddetails">
+                <div class="_9uwBCwY0my"><span>4.5</span></div>
+                <div>•</div>
+                <div>28 MINS</div>
+                <div>•</div>
+                <div class="nVWSi">₹200 FOR TWO</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="cardimg">
+                <img class="restimg"
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/npko4czaetvihkj5dwll">
+            </div>
+            <div class="cardrestraunt">
+                <span class="restname">Sudamache Pohe</span>
+            </div>
+            <div class="cardgenre">
+                Snacks, Beverages
+            </div>
+            <div class="carddetails">
+                <div class="_9uwBCwY0my"><span>4.5</span></div>
+                <div>•</div>
+                <div>28 MINS</div>
+                <div>•</div>
+                <div class="nVWSi">₹200 FOR TWO</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="cardimg">
+                <img class="restimg"
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/npko4czaetvihkj5dwll">
+            </div>
+            <div class="cardrestraunt">
+                <span class="restname">Sudamache Pohe</span>
+            </div>
+            <div class="cardgenre">
+                Snacks, Beverages
+            </div>
+            <div class="carddetails">
+                <div class="_9uwBCwY0my"><span>4.5</span></div>
+                <div>•</div>
+                <div>28 MINS</div>
+                <div>•</div>
+                <div class="nVWSi">₹200 FOR TWO</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="cardimg">
+                <img class="restimg"
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/npko4czaetvihkj5dwll">
+            </div>
+            <div class="cardrestraunt">
+                <span class="restname">Sudamache Pohe</span>
+            </div>
+            <div class="cardgenre">
+                Snacks, Beverages
+            </div>
+            <div class="carddetails">
+                <div class="_9uwBCwY0my"><span>4.5</span></div>
+                <div>•</div>
+                <div>28 MINS</div>
+                <div>•</div>
+                <div class="nVWSi">₹200 FOR TWO</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="cardimg">
+                <img class="restimg"
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/npko4czaetvihkj5dwll">
+            </div>
+            <div class="cardrestraunt">
+                <span class="restname">Sudamache Pohe</span>
+            </div>
+            <div class="cardgenre">
+                Snacks, Beverages
+            </div>
+            <div class="carddetails">
+                <div class="_9uwBCwY0my"><span>4.5</span></div>
+                <div>•</div>
+                <div>28 MINS</div>
+                <div>•</div>
+                <div class="nVWSi">₹200 FOR TWO</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

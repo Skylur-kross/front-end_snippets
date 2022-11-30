@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <h3>My Products</h3>
+    <hr />
+    <ul id="productList"></ul>
+  </div>
+</body>
+<script>
+  /**
+* @description {Method to update dom element in batch using parent fragment}
+*/
+  function fragmentUpdate() {
+    // Create batch fragment container for capturing changes
+
+    const container = document.createDocumentFragment();
+    const startTime = performance.now();
+    const products = [
+
+      "badminton",
+      "soccor",
+      "football",
+      "basketball",
+      "cricket",
+      "hockey",
+      "MMA",
+      "akhada",
+    ];
+
+    for (let i = 0; i < products.length; i++) {
+      const currProduct = products[i];
+      const element = document.createElement("li");
+      element.innerText = currProduct;
+      container.append(element);
+    }
+
+    // Mutating DOM as a batch update
+    document.getElementById("productList").appendChild(container);
+
+    const endTime = performance.now();
+    return endTime - startTime;
+  }
+
+  console.log(fragmentUpdate());
+
+
+
+// function fragmentUpdate() {
+//   // Create batch fragment container for capturing changes
+//   const container = document.createDocumentFragment();
+//   const startTime = performance.now();
+
+//   for (let i = 0; i < 100000; i++) {
+//     const element = document.createElement("p");
+//     element.textContent = "Hello";
+//     container.appendChild(element);
+//   }
+
+//   // Mutating DOM as a batch update
+//   document.body.appendChild(container);
+
+//   const endTime = performance.now();
+//   return endTime - startTime;
+// }
+
+// console.log(fragmentUpdate());
+</script>
+
+</html>

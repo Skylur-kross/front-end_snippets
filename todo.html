@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Quicksand", sans-serif;
+      }
+      body {
+        background-color: #e9e9e9;
+      }
+      .header {
+        display: flex;
+        gap: 6px;
+      }
+
+      #todos-list {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        text-transform: capitalize;
+
+      }
+      .container{
+        margin-left: 300px;
+        margin-right: 300px;
+
+      }
+      #todo-title{
+        
+      }
+      .header{
+        margin-top: 100px;
+        justify-content: center;
+      }
+      .todo-item {
+        background-color: #fff;
+        padding: 8px;
+      }
+      .list-container{
+        margin-top: 100px;
+        background-color: bisque;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div>
+          <input
+            id="todo-title"
+            type="text"
+            placeholder="Enter your task title!"
+          />
+        </div>
+        <div>
+          <button onclick="addTodo()">ADD</button>
+        </div>
+      </div>
+      <div class="list-container">
+        <div>
+          <h3>My Todos</h3>
+        </div>
+        <hr />
+        <div id="todos-list"></div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  function addTodo() {
+    console.log("Add todo is clicked");
+
+    // Grabbing the input field & it's value
+    const todoInputTitleElem = document.getElementById("todo-title");
+    const todoInputTitleVal = todoInputTitleElem.value;
+
+    // console.log("@AJ todoInputTitleElem Value: ", todoInputTitleElem.value);
+
+    // Checking if the input is empty
+    if (todoInputTitleVal === "") {
+      alert("Please enter a valid todo title.");
+      return;
+    }
+
+    // Grabbing the todo list container
+    const todoListElem = document.getElementById("todos-list");
+
+    // Dynamically creating a card with the data
+    const todoCard = document.createElement("div");
+    todoCard.className = "todo-item";
+    todoCard.innerText = todoInputTitleVal;
+
+    // Updating the list using appendChild
+    todoListElem.appendChild(todoCard);
+
+    // Resetting the input field & clearing it
+    todoInputTitleElem.value = "";
+  }
+</script>

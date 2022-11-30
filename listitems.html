@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h3>My Products</h3>
+      <hr />
+      <ul id="productList"></ul>
+    </div>
+  </body>
+</html>
+
+<script>
+//  const products = [
+
+//     {"sports":"badminton"},
+//     {"sports":"soccor"},
+//     {"sports":"football"},
+//     {"sports":"basketball"},
+//     {"sports":"cricket"},
+//     {"sports":"hockey"},
+//     {"sports":"MMA"},
+//     {"sports":"akhada"},
+// ]
+const products = [
+
+"badminton",
+"soccor",
+"football",
+"basketball",
+"cricket",
+"hockey",
+"MMA",
+"akhada",
+];
+  
+
+  const listContainer = document.getElementById("productList");
+
+  for (let i = 0; i < products.length; i++) {
+    const currProduct = products[i];
+
+    console.log(currProduct);
+
+    const listItem = document.createElement("li");
+    listItem.innerText = currProduct;
+    listContainer.appendChild(listItem);
+  }
+</script>

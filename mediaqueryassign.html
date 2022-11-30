@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 24px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-bottom: solid 1px silver;
+        }
+
+        .nav-list,
+        .navbar {
+            display: none;
+        }
+
+        @media (min-width: 1080px) {
+
+            .nav-list,
+            .navbar{
+                display: flex;
+                gap: 20px;
+                list-style-type: none;
+                justify-content: center;
+            }
+
+            .button{
+                background-color: #eb5d1f;
+                padding: 8px;
+                border-radius: 20px;
+                height: 50px;
+                font-size: 14px;
+                color: white;
+                border-color: #eb5d1f;
+            }
+
+            .icon-burger {
+                display: none;
+                justify-content: center;
+            }
+        }
+
+
+        /* @media (max-width: 1080px) {
+            .navbar  {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+            .nav-list.show,
+            .navbar.show {
+                display: flex;
+
+            }
+            .button.show {
+                display: flex;
+            }
+        } */
+
+        .line {
+            width: 30px;
+            height: 5px;
+            background-color: #000;
+            margin: 5px;
+            border-radius: 3px;
+            transition: 0.3s ease-in-out;
+        }
+    </style>
+    <script>
+        const button = document.getElementById("icon-burger");
+        const nav = document.getElementById("navbar");
+
+        button.addEventListener('click', () => {
+            nav.classList.toggle('show');
+        });
+    </script>
+</head>
+
+<body>
+    <header class="container">
+        <div class="logo">
+            <a href="/">
+                <img src="./logo_v2.webp" width="80" alt="Vidhya Skill School" style="vertical-align: middle;">
+            </a>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-list  hide">
+                <li class="navlist">Home</li>
+                <li class=" navlist">Curriculum</li>
+                <li class=" navlist">Faq</li>
+                <li class=" navlist">About Us</li>
+                <li class=" navlist">Contact Us</li>
+                <li class=" navlist">Blogs</li>
+            </ul>
+            <button class="button">Cohort 9 | Tap to apply</button>
+            <button class="button">Apply to Cohort 9</button>
+            <button class="button">Hire From Us</button>
+
+        </nav>
+        <label id="checked" class="icon-burger ">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+
+    </header>
+</body>
+
+</html>
